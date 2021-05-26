@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style>
+#divforwhole {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color:orange;
+ 
+  
+   margin: auto;
+  width: 100%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+      border-color: #b66333;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h2 style="color:#a96325">Welcome to  Expense Reimbursement System</h2>      
+    <p style="color:#a96325">You can now view the approved requests</p>
+  </div>
+</div>
+
+
+<nav style="color:#a96325" class="navbar navbar-inverse">
+  <div  style="color:#a96325"class="container-fluid">
+    <div style="color:#a96325" class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+   
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://localhost:9026/Project1/html/login2.html">Logout</a></li>
+       
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://localhost:9026/Project1/html/pagewithlayout.html"><span class="glyphicon glyphicon-user"></span> Home</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<div id ="divforwhole">
+
+<div class="container my-4">
+
+  <p class="font-weight-bold"></p>
+
+  <p><strong> <a href="https://mdbootstrap.com/docs/standard/data/datatables/"target="_blank"></a></strong> </p>
+
+  <hr class="mt-5">
+
+  <p>Expense Status <a target="_blank" href="https://mdbootstrap.com/docs/standard/"></a> </p>
+
+  <a class="btn btn-primary me-2" href="https://mdbootstrap.com/docs/standard/getting-started/installation/" target="_blank" role="button"> <i class="fas fa-download ms-2"></i></a>
+  <a class="btn btn-danger me-2" target="_blank" href="https://mdbootstrap.com/docs/standard/" role="button"></a>
+  <a class="btn btn-success me-2" target="_blank" href="https://mdbootstrap.com/docs/standard/getting-started/" role="button"></a>
+  <a class="btn btn-dark me-2" target="_blank" href="https://github.com/mdbootstrap/mdb-ui-kit" role="button"> <i class="fab fa-github ms-2"></i></a>
+  <hr class="mb-5">
+
+  <p class="font-weight-bold"></p>
+
+  <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th class="th-sm">Id
+
+        </th>
+        <th class="th-sm">Amount
+
+        </th>
+        <th class="th-sm">Submitted
+
+        </th>
+        <th class="th-sm">Resolved
+
+        </th>
+        <th class="th-sm">Description
+
+        </th>
+        <th class="th-sm">Status
+
+        </th>
+      </tr>
+    </thead>
+    <tbody id ="tbody">
+      <tr>
+        <td>1</td>
+        <td>25</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Food Expense</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>30</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Food Expense</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+       <td>3</td>
+        <td>300</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+       <td>4</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>400</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+       <td>6</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+       <td>7</td>
+        <td>100</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+       <td>8</td>
+        <td>80</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>800</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+       <td>10</td>
+        <td>900</td> 
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Approved</td>
+      </tr>
+      
+      
+     
+      
+     
+      
+     
+      
+      
+      
+    </tbody>
+   
+   <!--  <tfoot>
+      <tr>
+        <th>Name
+        </th>
+        <th>Position
+        </th>
+        <th>Office
+        </th>
+        <th>Age
+        </th>
+        <th>Start date
+        </th>
+        <th>Salary
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+-->
+</div>
+
+</div>
+</body>
+</html>

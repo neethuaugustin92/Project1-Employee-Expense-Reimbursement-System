@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+#divforwhole {
+  text-align: center;
+  height: 50%;
+  width: 50%;
+  background-color:orange;
+ 
+  
+   margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+
+<style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+      border-color: #b66333;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h2 style="color:#a96325"> Submit your Expense</h2>      
+    <p style="color:#a96325"> your expense will be submitted to manager for review</p>
+  </div>
+</div>
+
+
+
+
+<nav style="color:#a96325" class="navbar navbar-inverse">
+  <div  style="color:#a96325"class="container-fluid">
+    <div style="color:#a96325" class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+   
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://localhost:9026/Project1/html/login2.html">Logout</a></li>
+       
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://localhost:9026/Project1/html/pagewithlayout.html"><span class="glyphicon glyphicon-user"></span> Home</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id ="divforwhole">
+<!--
+<form >
+  <div class="form-row">
+  
+  <div>  Sumbit Reimbersemnt </div>
+    <div class="form-group col-md-6">
+      <label for="Amount">Amount</label>
+      <input type="text" class="form-control" id="Amount" placeholder="Amount">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="ResolvedTime">Resolved Time</label>
+      <input type="date" id="ResolvedTime" name="trip-start"
+       value="2021-05-03"
+       min="2020-05-03" max="2022-05-03">
+    
+    </div>
+    <div class="form-group col-md-6">
+      <label for="Submitted">Submitted Time</label>
+      <input type="date" id="start" name="trip-start"
+       value="2021-05-03"
+       min="2020-05-03" max="2022-05-03">
+     
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Description">Description</label>
+    <input type="text" class="form-control" id="Description" placeholder="Description">
+  </div>
+  <div class="form-group">
+    <label for="Recipt">Upload Recipt</label>
+    <input type="file" class="form-control" id="Recipt" accept=".jpg, .jpeg, .png" >
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="Author">Reim Author</label>
+      <input type="text" class="form-control" id="Author">
+    </div>
+    
+    
+    <div class="form-group col-md-4">
+      <label for="inputState">Reim Type</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose from below</option>
+        <option value="1">LODGING</option>
+        <option value="2">TRAVEL</option>
+        <option value="3">FOOD</option>
+         <option value="4">OTHER</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+ 
+  <div class="form-group col-md-6">
+      <label for="Author">Author id</label>
+      <input type="text" class="form-control" id="Author" placeholder="Author">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="Resoler">Resoler id</label>
+      <input type="text" class="form-control" id="Resoler" placeholder="Resoler">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="Status">Reim Status id</label>
+      <input type="text" class="form-control" id="Status" placeholder="Status">
+    </div>
+  
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+
+
+-->
+
+
+
+<form action ="/Project1/Reimbursemnet.reim" method ="post">
+  <div class="form-group row">
+    <label for="Amount" class="col-sm-2 col-form-label">Amount</label>
+    <div class="col-sm-10">
+      
+      <input type="text" class="form-control" name ="Amount" id="Amount" placeholder="Enter Amount">
+    </div>
+  </div>
+  
+  <!--  
+  <div class="form-group row">
+    <label for="ResolvedTime" class="col-sm-2 col-form-label">Resolved Time</label>
+    <div class="col-sm-10">
+      
+      
+      <input type="date" id="ResolvedTime" name="resolveddate"
+       value="2021-05-03"
+       min="2020-05-03" max="2022-05-03">
+    </div>
+  </div>
+  -->
+  
+  <div class="form-group row">
+    <label for="Submitted" class="col-sm-2 col-form-label">Submitted Time</label>
+    <div class="col-sm-10">
+      
+      <input type="date" id="start"  class="form-control" name="submiteddate"
+       value="2021-05-07"
+       min="2020-05-07" max="2022-05-07">
+      
+    </div>
+  </div>
+  
+  
+   <div class="form-group row">
+    <label for="Description" class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+     
+     <textarea rows="2" class="form-control"cols="2" name ="Description"id="Description" placeholder="Enter the details ablout the Expense"></textarea>
+   <!--  <input type="text" class="form-control" id="Description" placeholder="Enter the details ablout the Expense">  -->
+      
+    </div>
+  </div>
+  
+  
+  
+   <div class="form-group row">
+    <label for="Recipt" class="col-sm-2 col-form-label">Upload Recipt</label>
+    <div class="col-sm-10">
+     
+    <input type="file" class="form-control" name ="Recipt" id="Recipt" accept=".jpg, .jpeg, .png"  >
+      
+    </div>
+  </div>
+  
+  
+  
+   <div class="form-group row">
+    <label for="Author" class="col-sm-2 col-form-label">Reim Author</label>
+    <div class="col-sm-10">
+     
+    <input type="text" class="form-control"  name ="Author"id="Author" >
+      
+    </div>
+  </div>
+  
+  
+   <div class="form-group row">
+      <label for="inputState">ReimType</label>
+      <select name ="ReimType" id="ReimType" class="form-control">
+        <option selected>Choose from below</option>
+        <option value="1">LODGING</option>
+        <option value="2">TRAVEL</option>
+        <option value="3">FOOD</option>
+         <option value="4">OTHER</option>
+      </select>
+    </div>
+  
+  
+
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary"> Submit </button>
+    </div>
+  </div>
+</form>
+
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+
+</body>
+</html>

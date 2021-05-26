@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style>
+#divforwhole {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color:orange;
+ 
+  
+   margin: auto;
+  width: 100%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+
+<style>
+em{
+    background-color: yellow
+}
+</style>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+      border-color: #b66333;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h2 style="color:#a96325">Welcome to Empoylee Reimbersement Application/Manager View!!!!!!</h2>      
+    <p style="color:#a96325">You can now view all the requests</p>
+  </div>
+</div>
+
+<nav style="color:#a96325" class="navbar navbar-inverse">
+  <div  style="color:#a96325"class="container-fluid">
+    <div style="color:#a96325" class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="html/login2.html">Logout</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="html/pagewithlayout.html">Home</a></li>
+       
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="pagewithlayout.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<div id ="divforwhole">
+
+<div class="container my-4">
+
+  <p class="font-weight-bold"></p>
+
+  <p><strong> <a href="https://mdbootstrap.com/docs/standard/data/datatables/"
+                                                                             target="_blank"></a> </p>
+
+  <hr class="mt-5">
+
+  <p>Expense Status <a target="_blank" href="https://mdbootstrap.com/docs/standard/"></a> </p>
+
+  <a class="btn btn-primary me-2" href="https://mdbootstrap.com/docs/standard/getting-started/installation/" target="_blank" role="button"> <i class="fas fa-download ms-2"></i></a>
+  <a class="btn btn-danger me-2" target="_blank" href="https://mdbootstrap.com/docs/standard/" role="button"></a>
+  <a class="btn btn-success me-2" target="_blank" href="https://mdbootstrap.com/docs/standard/getting-started/" role="button"></a>
+  <a class="btn btn-dark me-2" target="_blank" href="https://github.com/mdbootstrap/mdb-ui-kit" role="button"> <i class="fab fa-github ms-2"></i></a>
+  <hr class="mb-5">
+
+  <p class="font-weight-bold"></p>
+  
+  
+  <p style="text-align:right;width:500px;">
+    <span style="font-weight:bold;">Search:</span> <input type="text" id="txtSearch" name="txtSearch" maxlength="50" />&nbsp;
+    <img id="imgSearch" src="/images/cancel.gif" alt="Cancel Search" title="Cancel Search" style="width:150px;width:14px;height:14px;" />
+
+  </p>
+  
+  
+ 
+
+<!--  <table id="tblSearch" cellpadding="2" cellspacing="0" border="1" style="width:500px;"> -->
+  <table id="tblSearch" class="table table-striped table-bordered table-sm" cellpadding="2" cellspacing="0" border="1" width="100%">
+    <thead>
+      <tr>
+        <th class="th-sm">Id
+
+        </th>
+        <th class="th-sm">Amount
+
+        </th>
+        <th class="th-sm">Submitted
+
+        </th>
+        <th class="th-sm">Resolved
+
+        </th>
+        <th class="th-sm">Description
+
+        </th>
+        <th class="th-sm">Status
+
+        </th>
+         <th class="th-sm">Action
+
+        </th>
+       
+         <th class="th-sm">Action
+
+        </th>
+      </tr>
+    </thead>
+    <tbody id ="tbody">
+      <tr>
+        <td>1</td>
+        <td>25</td>
+        <td>2021/05/07</td>
+       <td>2021/05/07</td>
+        <td>Food Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>30</td>
+         <td>2021/05/07</td>
+       <td>2021/05/07</td>
+        <td>Food Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>3</td>
+        <td>300</td>
+         <td>2021/05/07</td>
+       <td>2021/05/07</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>4</td>
+        <td>40</td>
+        <td>2021/05/07</td>
+       <td>2021/05/07</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+       
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>400</td>
+       <td>2021/05/07</td>
+       <td>2021/05/07</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>6</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>7</td>
+        <td>100</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>8</td>
+        <td>80</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>800</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>10</td>
+        <td>900</td> 
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      
+       <tr>
+        <td>1</td>
+        <td>25</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Food Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>30</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Food Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>3</td>
+        <td>300</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>4</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>400</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>6</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>7</td>
+        <td>100</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>8</td>
+        <td>80</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>800</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>10</td>
+        <td>900</td> 
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+       <tr>
+        <td>1</td>
+        <td>25</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Food Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>30</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Food Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>3</td>
+        <td>300</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>4</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>400</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>6</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>7</td>
+        <td>100</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>8</td>
+        <td>80</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>800</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>10</td>
+        <td>900</td> 
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      
+           <tr>
+        <td>1</td>
+        <td>25</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Food Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>30</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Food Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>3</td>
+        <td>300</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>4</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>400</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>6</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>7</td>
+        <td>100</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>8</td>
+        <td>80</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>800</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>10</td>
+        <td>900</td> 
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      
+         <tr>
+       <td>3</td>
+        <td>300</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>4</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>400</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>6</td>
+        <td>40</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>7</td>
+        <td>100</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Travel Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>8</td>
+        <td>80</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>800</td>
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+       <td>10</td>
+        <td>900</td> 
+        <td>2021/05/05</td>
+       <td>2021/05/06</td>
+        <td>Other Expense</td>
+        <td>Pending</td>
+      </tr>
+      
+     
+      
+     
+      
+      
+      
+    </tbody>
+   
+   <!--  <tfoot>
+      <tr>
+        <th>Name
+        </th>
+        <th>Position
+        </th>
+        <th>Office
+        </th>
+        <th>Age
+        </th>
+        <th>Start date
+        </th>
+        <th>Salary
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+-->
+</div>
+
+</div>
+
+
+
+
+<script type="text/javascript">
+
+
+jQuery.expr[":"].containsNoCase = function (el, i, m) {
+        var search = m[3];
+        if (!search) return false;
+        return eval("/" + search + "/i").test($(el).text());
+    };
+
+    jQuery(document).ready(function () {
+        // used for the first example in the blog post
+        jQuery('li:contains(\'DotNetNuke\')').css('color', '#0000ff').css('font-weight', 'bold');
+
+        // hide the cancel search image
+        jQuery('#imgSearch').hide();
+
+        // reset the search when the cancel image is clicked
+        jQuery('#imgSearch').click(function () {
+            resetSearch();
+        });
+
+        // cancel the search if the user presses the ESC key
+        jQuery('#txtSearch').keyup(function (event) {
+            if (event.keyCode == 27) {
+                resetSearch();
+            }
+        });
+
+        // execute the search
+        jQuery('#txtSearch').keyup(function () {
+            // only search when there are 3 or more characters in the textbox
+            if (jQuery('#txtSearch').val().length > 0) {
+                // hide all rows
+                jQuery('#tblSearch tr').hide();
+                // show the header row
+                jQuery('#tblSearch tr:first').show();
+                // show the matching rows (using the containsNoCase from Rick Strahl)
+                jQuery('#tblSearch tr td:containsNoCase(\'' + jQuery('#txtSearch').val() + '\')').parent().show();
+
+                // show the cancel search image
+                jQuery('#imgSearch').show();
+            }
+            else if (jQuery('#txtSearch').val().length == 0) {
+                // if the user removed all of the text, reset the search
+                resetSearch();
+            }
+
+            // if there were no matching rows, tell the user
+            if (jQuery('#tblSearch tr:visible').length == 1) {
+                // remove the norecords row if it already exists
+                jQuery('.norecords').remove();
+                // add the norecords row
+                jQuery('#tblSearch').append('<tr class="norecords"><td colspan="5" class="Normal">No records were found</td></tr>');
+            }
+        });
+    });
+
+    function resetSearch() {
+        // clear the textbox
+        jQuery('#txtSearch').val('');
+        // show all table rows
+        jQuery('#tblSearch tr').show();
+        // remove any no records rows
+        jQuery('.norecords').remove();
+        // remove the cancel search image
+        jQuery('#imgSearch').hide();
+        // make sure we re-focus on the textbox for usability
+        jQuery('#txtSearch').focus();
+    }
+
+    
+    
+    
+    $(function() {
+    	   $('tr')
+    	       .find('td')
+    	      
+    	       .parent()//traversing to 'tr' Element
+    	       .append('<td><input type="button" value="Deny Request" class="delrow" /></td><td><input type="button" value="Approve Request" class="delrow" /></>'); 
+    	    
+    	  
+    	    
+    	    $('.delrow').click(function(){
+    	       $(this).parent().parent().remove(); //Deleting the Row (tr) Element 
+    	    });
+    	});
+
+
+</script>
+</body>
+</html>
